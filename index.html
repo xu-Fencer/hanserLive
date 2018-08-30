@@ -4,10 +4,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <script src="/js/jquery/src/jquery.js" type="text/javascript" charset="utf-8" async defer></script>
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/dot.css">
+        <link rel="stylesheet" href="css/title.css">
+        <link rel="stylesheet" href="css/circle.css">
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/title.js"></script>
         <script type="text/javascript">
             function browserRedirect() {
-                var _this = $(this);
                 var sUserAgent = navigator.userAgent.toLowerCase();
                 var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
                 var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -19,16 +27,44 @@
                 var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
                 if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
                     //跳转移动端页面
-                    _this.animate({....},1000,"",function(){window.location.href = _this.attr("https://m.douyu.com/2550505");});
+                    window.location.href="https://m.douyu.com/2550505";
                 } else {
                     //跳转pc端页面
-                    _this.animate({....},1000,"",function(){window.location.href = _this.attr("https://wwww.douyu.com/2550505");});
+                    window.location.href="https://www.douyu.com/2550505";
                 }
             }
-            browserRedirect(); 
+            //2秒延迟，假装加载
+            window.setInterval("browserRedirect();", 3000);
         </script>
+
+
+
     </head>
     <body>
+        <div style="position: absolute;top: 10%;left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%); ">
 
+        <div class="wrap">
+          <span>going &nbsp;to &nbsp;[ 2550505 ] &nbsp;<dot>....</dot></span>
+        </div>
+        
+        </div>
+
+    
+    <h1>
+      <em>H</em>
+      <em class="planet left">A</em>
+      <em>N</em>
+      <em>S</em>
+      <em class="planet right">E</em>
+      <em>R</em>
+    </h1>
+
+
+        
+        
     </body>
 </html>
