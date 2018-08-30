@@ -4,8 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <script src="/js/jquery/src/jquery.js" type="text/javascript" charset="utf-8" async defer></script>
         <script type="text/javascript">
             function browserRedirect() {
+                var _this = $(this);
                 var sUserAgent = navigator.userAgent.toLowerCase();
                 var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
                 var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -17,10 +19,10 @@
                 var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
                 if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
                     //跳转移动端页面
-                    window.location.href="https://m.douyu.com/2550505";
+                    _this.animate({....},1000,"",function(){window.location.href = _this.attr("https://m.douyu.com/2550505");});
                 } else {
                     //跳转pc端页面
-                    window.location.href="https://www.douyu.com/2550505";
+                    _this.animate({....},1000,"",function(){window.location.href = _this.attr("https://wwww.douyu.com/2550505");});
                 }
             }
             browserRedirect(); 
