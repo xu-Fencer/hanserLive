@@ -36,7 +36,16 @@
             //2秒延迟，假装加载
             window.setInterval("browserRedirect();", 3000);
         </script>
-
+        //添加百度统计
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?111af363939f914379c536e52fa925a2";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
 
 
     </head>
